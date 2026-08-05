@@ -1,18 +1,8 @@
 connection: "looker_partner_demo"
 
-# 1. CHANGED: Must use double slashes (//) to pull views from Project A
-include: "//project_a/views/**/*.view.lkml"
+include: "/views/*.view.lkml"
 
-# ------------------------------------------------------------------
-# 1. CACHING POLICY
-# ------------------------------------------------------------------
-# CHANGED: Renamed datagroup to prevent name collisions on the same instance
-datagroup: project_b_default_datagroup {
-  sql_trigger: SELECT CURRENT_DATE() ;;
-  max_cache_age: "24 hours"
-}
 
-persist_with: project_b_default_datagroup
 
 # ------------------------------------------------------------------
 # 2. VIEW REFINEMENTS (NEW MEASURES & DIMENSIONS)
@@ -24,6 +14,8 @@ view: +order_items {
     sql: ${sale_price} ;;
     value_format_name: usd
   }
+
+
 }
 
 view: +users {
