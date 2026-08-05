@@ -1,7 +1,7 @@
 connection: "looker_partner_demo"
 
 # include all the views
-include: "/views/**/*.view.lkml"
+include: "//project_a/views/**/*.view.lkml"
 
 datagroup: project_a_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
