@@ -1,4 +1,4 @@
 remote_dependency: project_a {
   url: "https://github.com/BasavarajAngadi55/looker-practice-.git"
-  ref: "e03c6546ca48df890ed6e3781c9f83246df642b8"
+  ref: "ca1e778a07b3868b854428a0d8826a76bf7227ab"
 }
